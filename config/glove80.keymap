@@ -36,6 +36,11 @@
 #define WRD_LEFT        &mt LA(LEFT)
 #define WRD_RIGHT       &mt LA(RIGHT)
 
+
+#undef UNDO
+#undef CUT
+#undef COPY
+#undef PASTE
 #define UNDO            &mt LG(LS(Z))  LG(Z)
 #define CUT             &kp LG(X)
 #define COPY            &kp LG(C)
@@ -104,7 +109,7 @@
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                                             &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
             &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                                         &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp F12
             &kp TAB        &kp Q    &kp W       &kp E       &kp R       &kp T                                                                                          &kp Y   &kp U   &kp I       &kp O       &kp P       &kp BSLH
-            MEH_ESC        &kp A    &kp S       &kp D       &kp F       &kp G                                                                                          &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
+            ESC_MEH        &kp A    &kp S       &kp D       &kp F       &kp G                                                                                          &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
             &kp LSFHT      &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LGUI    &kp LCTRL   &lt_td NAV NAV          XXX         XXX            MEH_HYP     &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp MINUS
             &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           SPC_NAV     &kp LSFHT   &kp LALT                XXX         &kp BACKSPACE  ENT_SYM             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PLUS
             >;
