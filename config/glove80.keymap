@@ -57,9 +57,32 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to>;
         };
+
+        magic: magic_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo MGC>, <&rgb_ug_status_macro>;
+        };
+        meh_hyp; meh_hyp {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MEH>, <&kp HYP>;
+        };
     };
 
     macros {
+        rgb_ug_status_macro: rgb_ug_status_macro_0 {
+            label = "RGB_UG_STATUS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&rgb_ug RGB_STATUS>;
+        };
+        
         bt_0: bt_profile_macro_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -111,7 +134,7 @@
             &kp TAB        &kp Q    &kp W       &kp E       &kp R       &kp T                                                                                          &kp Y   &kp U   &kp I       &kp O       &kp P       &kp BSLH
             ESC_MEH        &kp A    &kp S       &kp D       &kp F       &kp G                                                                                          &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
             &kp LSHIFT     &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LGUI    &kp LCTRL   &lt_td NAV NAV          XXX         XXX            MEH_HYP     &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp MINUS
-            &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           SPC_NAV     &kp LSHIFT  &kp LALT                XXX         &kp BACKSPACE  ENT_SYM             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PLUS
+            &magic         &kp HOME &kp END     &kp LEFT    &kp RIGHT           SPC_NAV     &kp LSHIFT  &kp LALT                XXX         &kp BACKSPACE  ENT_SYM             &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PLUS
             >;
         };
 
